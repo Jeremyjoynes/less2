@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="lesson">
+
+<head>
+    <base href="/">
+    <title>Title</title>
+    <!--Library styles -->
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
+    <!-- application styles -->
+    <link rel="stylesheet" href="css/angular-shim.css" />
+    <!--local styles -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body ng-cloak>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                    aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+                <a class="navbar-brand" ui-sref="Home">NG Lesson</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li ui-sref-active="active"><a ui-sref="Home">Home</a></li>
+                    <li ui-sref-active="active"><a ui-sref="About">About</a></li>
+                    <li ui-sref-active="active"><a ui-sref="Products">Products</a></li>
+                    <li ui-sref-active="active"><a ui-sref="Login">Login</a></li>
+
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </nav>
+
+    <div class="container" ui-view ng-controller="HomeController as vm">
+
+
+
+    </div>
+    <!-- /.container -->
+
+
+    <!--Library Dependencies -->
+    <script src="lib/angular/angular.min.js"></script>
+    <script src="lib/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <!-- Application Dependencies -->
+    <script src="js/home/home.controller.js"></script>
+    <script src="js/home/home.config.js"></script>
+    <script src="js/home/home.js"></script>
+
+
+
+    <script src="js/services/authentication.service.js"></script>
+    <script src="js/services/services.js"></script>
+    <script src="js/services/product.service.js"> </script>
+
+    <script src="js/models/stateManagement.js"></script>
+    <script src="js/models/product.model.js"></script>
+
+
+    <script src="js/login/login.controller.js"></script>
+    <script src="js/login/login.config.js"></script>
+    <script src="js/login/login.js"></script>
+
+    <script src="js/products/products.controller.js"></script>
+    <script src="js/products/products.config.js"></script>
+    <script src="js/products/products.js"></script>
+
+
+    <script src="js/about/about.controller.js"></script>
+    <script src="js/about/about.config.js"></script>
+    <script src="js/about/about.js"></script>
+
+    <script src="js/app.run.js"></script>
+    <script src="js/app.config.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+[
+    {
+        "id": 123,
+        "name": "xbox",
+        "price": 399.99,
+        "outOfStock": false
+    },
+    {
+        "id": 111,
+        "name": "play station",
+        "price": 299.99,
+        "outOfStock": false
+    },
+    {
+        "id": 117,
+        "name": "banana",
+        "price": 0.79,
+        "outOfStock": false
+    },
+    {
+        "id": 118,
+        "name": "orange",
+        "price": 0.59,
+        "outOfStock": false
+    },
+    {
+        "id": 119,
+        "name": "bagel",
+        "price": 1.99,
+        "outOfStock": false
+    },
+    {
+        "id": 211,
+        "name": "car",
+        "price": 24599.99,
+        "outOfStock": false
+    },
+    {
+        "id": 9000,
+        "name": "truck",
+        "price": 36899,
+        "outOfStock": false
+    }
+]

@@ -1,0 +1,25 @@
+{
+  "name": "ng-lesson-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "lite": "lite-server",
+    "tsc": "tsc",
+    "tsc:w": "tsc -w",
+    "start": "concurrently \"npm run lite\" \"npm run tsc:w\" "
+  },
+  "keywords": [
+    "angular"
+  ],
+  "author": "Jeremy Joynes",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@types/angular": "1.6.2",
+    "@types/angular-ui-bootstrap": "^0.13.39",
+    "@types/angular-ui-router": "^1.1.36",
+    "concurrently": "^3.1.0",
+    "lite-server": "^2.2.2"
+  }
+}

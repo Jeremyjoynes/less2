@@ -1,0 +1,10 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        {{vm.product.name}}
+        <span ng-if="!vm.product.outOfStock" class="label label-success pull-right">In stock</span>
+        <span ng-if="vm.product.outOfStock" class="label label-danger pull-right">Out Of Stock</span>
+    </div>
+    <div class="panel-body">
+        <p>Price: {{vm.product.name}}</p>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<h1>Product Catalog</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Available</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="product in vm.products">
+            <td><a ui-sref="Product ({id: $index })">{{product.name}}</a></td>
+            <td>${{product.price}}</td>
+            <td>
+                <span ng-if="!product.outOfStock" class="label label-success"> In Stock </span>
+                <span ng-if="product.outOfStock" class="label label-danger">Out of Stock</span>
+                <!--ng-class="{'label-success': !product.outOfStock, 'label.danger': product.outOfStock}">-->
+                    
+                </span>
+            </td>
+
+        </tr>
+    </tbody>
+    <table>

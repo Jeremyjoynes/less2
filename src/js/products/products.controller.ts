@@ -3,25 +3,27 @@ namespace Lesson.Products {
 
     export class ProductsController {
         public products: Lesson.Models.Product[];
+        public searchField: string = "";
 
         static $inject = [
-            'ProductsService'
+         'ProductsService'
         ];
 
         constructor(
             private ProductsService: Lesson.Services.ProductsService
         ) {
-               this.products = ProductsService.getAllProducts();
+          this.products = ProductsService.getAllProducts();
         }
+        //public fetch
     }
 
     export class ProductController {
-        public product: Product;
+        public product: Lesson.Models.Product;
 
-                static $inject = [
-                    '$stateParams',
-                    'ProductsService'
-                ];
+        static $inject = [
+            '$stateParams',
+            'ProductsService'
+        ];
 
         constructor(
             $stateParams: ng.ui.IStateParamsService,
@@ -33,11 +35,4 @@ namespace Lesson.Products {
         }
     }
 
-    export class Product {
-        constructor(
-            public name: string,
-            public price: number,
-            public outOfStock: boolean)
-        { }
-    }
 }

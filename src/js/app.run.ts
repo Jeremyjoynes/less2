@@ -20,7 +20,7 @@ namespace Lesson {
                 if (toState.data && toState.data.requireAuthentication) {
                         if(!AuthenticationService.isLoggedIn()) {
                             event.preventDefault();
-                            $state.go('login');
+                            $state.go('Login');
                         }
                 }
         });

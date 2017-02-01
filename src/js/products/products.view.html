@@ -8,9 +8,17 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="product in vm.products">
-            <td><a ui-sref="Product ({id: $index })">{{product.name}}</a></td>
-            <td>${{product.price}}</td>
+        <tr>
+            <td>
+                <input type="text" ng-model="vm.searchField"
+                ng-model-options="{debounce:250}"
+            
+                 />
+            </td>
+        </tr>
+        <tr ng-repeat="product in vm.products | filter: vm.searchField">
+            <td><a ui-sref="Product ({id: product.id })">{{product.name}}</a></td>
+            <td>{{product.price|currency}}</td>
             <td>
                 <span ng-if="!product.outOfStock" class="label label-success"> In Stock </span>
                 <span ng-if="product.outOfStock" class="label label-danger">Out of Stock</span>

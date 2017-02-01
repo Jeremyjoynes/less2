@@ -7,7 +7,16 @@ namespace Lesson.Services{
         ];
         constructor(
             private $http: ng.IHttpService
-        ){}
+        ){
+
+            $http.get<Lesson.Models.Product[]>('data/product.list.json')
+            .then((response)=>{
+                return this.products = response.data;
+            })
+            .catch((response) =>{
+                console.error('could not retrieve product database');
+            });
+        }
 
         public getAllProducts(): Lesson.Models.Product[]{
             return this.products;
